@@ -1,9 +1,4 @@
-import subprocess
-import tempfile
-import os
 import requests
-import shutil
-import json
 from bs4 import BeautifulSoup
 
 def fetch(url):
