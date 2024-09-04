@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup
 
 
 def fetch(url):
-    """Fetches URL input and returns text for further use. Raises exception if there was an error."""
+    """Fetches URL input and returns text for further use.
+        Raises exception if there was an error."""
     try:
         response = requests.get(url)
         response.raise_for_status()
