@@ -18,12 +18,38 @@ def get_wordnet_pos(word):
                 "R": wordnet.ADV}
     return tag_dict.get(tag, wordnet.NOUN)
 
-def lemmatize_text(text):
-    '''Lemmatizes text before sending for keyword density calculation'''
+def get_synonyms(word):
+    '''Gets synonyms for keyword to ensure coverage'''
+    synonyms = set()
+    for syn in wordnet.synsets(word):
+        for lemma in syn.lemmas():
+            synonyms.add(lemma.name())
+    return synonyms
+
+def expand_and_lemmatize(keywords):
     lemmatizer = WordNetLemmatizer()
-    words = nltk.word_tokenize(text)
-    lemmatized = [lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in words]
-    return ' '.join(lemmatized)
+    expanded_keywords = set()
+    for keyword in keywords:
+        # Add original word
+        expanded_keywords.add(keyword)
+        # Add synonyms
+        expanded_keywords.update(get_synonyms(keyword))
+    # New set for storage of both original and lemmatized keywords
+    lemmatized_keywords = set()
+
+    for keyword in expanded_keywords:
+        lemmatized_keywords.add(keyword)
+        lemmatized_keywords.add(lemmatizer.lemmatize(keyword, get_wordnet_pos(keyword)))
+
+    return lemmatized_keywords
+
+# Currently being improved; will remove once expand_and_lemmatize() has been finished
+# def lemmatize_text(text):
+#     '''Lemmatizes text before sending for keyword density calculation'''
+#     lemmatizer = WordNetLemmatizer()
+#     words = nltk.word_tokenize(text)
+#     lemmatized = [lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in words]
+#     return ' '.join(lemmatized)
 
 def calc_keyword_density(text, keywords):
     '''Calculates keyword density using lemmatized text'''
