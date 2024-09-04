@@ -10,6 +10,7 @@ nltk.download('punkt')
 nltk.download('average_perceptron_tagger')
 
 def get_wordnet_pos(word):
+    '''Convert NTLK POS tags to WordNet Compatible'''
     tag = nltk.pos_tag([word])[0][1][0].upper()
     tag_dict = {"J": wordnet.ADJ,
                 "N": wordnet.NOUN,
