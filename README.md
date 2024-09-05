@@ -1,4 +1,4 @@
-# Welcome to the GitHub for the SEO Audit Automation Tool
+# Welcome to the Python SEO Audit Automation Tool
 
 This collection is written in Python and made to evaluate several core features of an SEO audit. This tool checks for:
 
