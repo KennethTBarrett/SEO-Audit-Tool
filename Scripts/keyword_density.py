@@ -41,8 +41,8 @@ def calc_keyword_density(text, keywords):
 # Example usage
 # text = fetch_text('https://www.arthritis.org/health-wellness/healthy-living/managing-pain/pain-relief-solutions/cbd-for-arthritis-pain')
 # keywords = ['cbd', 'cannabidiol']
+# print(calc_keyword_density(text, keywords))
 
-print(calc_keyword_density(text, keywords))
 ##### MVP #####
 
 # Below here are future improvements and these will be integrated later.
