@@ -17,6 +17,21 @@ def fetch(url):
         print(f"There was an issue fetching {url}: {ex}")
         return None
 
+def robots_txt_exists(url):
+    """Checks whether robots.txt file exists"""
+    # Put URL together
+    if not url.endswith('/'):
+        url += '/'
+    robots_url = url + 'robots.txt'
+
+    try:
+        response = requests.get(robots_url)
+        if response.status_code == 200:  # If file exists
+            return response.text
+        else:
+            return f"robots.txt not found. Status code: {response.status_code}"
+    except requests.RequestException as e:
+        return f"Error checking robots.txt {e}"
 
 def check_ssl_enabled(url):
     """Checks whether the website has SSL enabled."""
