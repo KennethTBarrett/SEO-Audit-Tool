@@ -3,9 +3,9 @@
 This collection is written in Python and made to evaluate several core features of an SEO audit. This tool checks for:
 
  - SSL-enabled
- - Existence of Robots.txt
+ - Existence of Robots.txt (coming soon)
  - Presence of title, meta description, and H1 headers (including length checks for title and meta description)
- - Presence of targeted keyword in title and meta description
+ - Presence of targeted keyword in title and meta description (coming soon)
  - Keyword density in text
 	 - This feature is still under development to consider the usage of synonyms
  - Website Performance
