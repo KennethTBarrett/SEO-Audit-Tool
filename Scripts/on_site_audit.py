@@ -1,5 +1,6 @@
 """This file exists to evaluate the presence and length of
-    title tags, meta descriptions, and H1 Headers"""
+    title tags, meta descriptions, and H1 Headers.
+    Also checks for the presence of robots.txt"""
 
 
 import requests
