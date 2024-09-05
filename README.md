@@ -9,7 +9,7 @@ This collection is written in Python and made to evaluate several core features 
 
 - SSL-enabled
 
-- Existence of Robots.txt (coming soon)
+- Existence of Robots.txt
 
 - Presence of title, meta description, and H1 headers (including length checks for title and meta description)
 
