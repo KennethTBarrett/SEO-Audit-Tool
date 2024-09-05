@@ -24,3 +24,6 @@ This collection is written in Python and made to evaluate several core features 
 
 ## How to Use This Tool
 Lorem ipsum odor amet, consectetuer adipiscing elit. Sodales augue curabitur est maximus ultrices. Donec ipsum aenean auctor dolor gravida ornare; risus enim.
+
+### Installing Dependencies
+Lorem ipsum dolor sit amet, in sed decore accumsan, qui quidam possit audiam in. Choro gubergren theophrastus an eam, pro sint essent atomorum cu, no qui nostro fabulas.
